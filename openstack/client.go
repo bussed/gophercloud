@@ -359,7 +359,7 @@ func NewImageServiceV2(client *gophercloud.ProviderClient, eo gophercloud.Endpoi
 
 // NewTelemetryV2 creates a ServiceClient that may be used to access the v2 telemetry service.
 func NewTelemetryV2(client *gophercloud.ProviderClient, eo gophercloud.EndpointOpts) (*gophercloud.ServiceClient, error) {
-	eo.ApplyDefaults("metering")
+	eo.ApplyDefaults("ces")
 	url, err := client.EndpointLocator(eo)
 	if err != nil {
 		return nil, err
